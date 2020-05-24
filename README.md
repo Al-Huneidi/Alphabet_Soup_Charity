@@ -39,15 +39,15 @@ The unnecessary features removed from the input data: Name and EIN
 Got the value counts for:  CLASSIFICATION and APPLICATION_TYPE 
 
 
-Created density plots for:
+Created density plots for: CLASSIFICATION and APPLICATION_TYPE to support my decision on how to bucket these features.
 
-	- CLASSIFICATION 
+CLASSIFICATION 
 	
 ![alt text](https://github.com/Al-Huneidi/Alphabet_Soup_Charity/blob/master/Screenshots/Preprocessing/plt_Class_density.png)
 	
 	
 	
-	- APPLICATION_TYPE 
+APPLICATION_TYPE 
 
 ![alt text](https://github.com/Al-Huneidi/Alphabet_Soup_Charity/blob/master/Screenshots/Preprocessing/plt_App_density.png)
 	
