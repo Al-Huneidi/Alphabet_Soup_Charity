@@ -92,7 +92,7 @@ Results:
 
 Loss metric: 55.24%	Accuracy: 72.54% 
 
-Image
+![alt text](https://github.com/Al-Huneidi/Alphabet_Soup_Charity/blob/master/Screenshots/132_33_Deep_NN/Final_loss_accuracy.png)
 	
 
 ### Model Adjustments to Achieve Predictive Accuracy Higher than 75%
