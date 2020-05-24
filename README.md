@@ -38,11 +38,16 @@ The unnecessary features removed from the input data: Name and EIN
 
 Got the value counts for:  CLASSIFICATION and APPLICATION_TYPE 
 
+
 Created density plots for:
 
 	- CLASSIFICATION Image
 	
+	
+	
 	- APPLICATION_TYPE Image
+	
+	
 	
 Bucketed features: CLASSIFICATION and APPLICATION_TYPE
 
@@ -50,13 +55,17 @@ Encoded categorical variables using one-hot encoding.
 
 Standardized numerical variables using Scikit-Learn’s StandardScaler class.
 
+
 ### Models Used: Random Forest and Deep Neural Network
 
 I wanted to see the results of each of these models especially since the Random Forest is robust against overfitting and outliers and nonlinear data while being efficient on a large dataset, with less code and faster results.	
 
-#### Random Forest
+#### Random Forest Results
 
-Random Forest Accuracy: 71% Image
+Random Forest Accuracy: 71%  I moved to the Deep Neural Network model as this was not a high enough accuracy.
+
+Image
+
 
 #### Deep Neural Network
 
@@ -71,12 +80,13 @@ Initial model consisted of  the following:
 - reLu activation of first and second hidden layers
 - Sigmoid activation for output
 
+I chose 132 neurons for the first layer because that number is three times the number of columns in the model dataframe.  I chose 33 neuron for the second layer I arbitrarily chose it by dividing 132 by 4, a fourth of the number of neurons in the first layer. 
+
 Results:
+
 Loss metric: 55.24%	Accuracy: 72.54% 
+
 Image
-
-
-I started with 132 neurons in the first layer and 33 neurons in the second layer.  I chose 132 neurons for the first layer because that number is three times the number of columns in the model dataframe.  I chose 33 neuron for the second layer I arbitrarily chose it by dividing 132 by 4, a fourth of the number of neurons in the first layer.   
 	
 
 ### Model Adjustments to Achieve Predictive Accuracy Higher than 75%
@@ -88,15 +98,15 @@ I started with 132 neurons in the first layer and 33 neurons in the second layer
 
 I reduced the epochs, not increased them.
 
-	⁃	80 Epochs: Loss = 55.52%, Accuracy = 72.53%  => an improvement all around
-	⁃	65 Epochs: Loss = 55.25%, Accuracy = 72.67%  => improvement in time and accuracy
-	⁃	50 Epochs: Loss = 55.25%, Accuracy = 72.74%  => improvement in time and accuracy
+	⁃	80 Epochs: Loss = 55.52%, Accuracy = 72.53%  => an improvement all - time, accuracy and loss
+	⁃	65 Epochs: Loss = 55.25%, Accuracy = 72.67%  => improvement in time and accuracy but loss increased
+	⁃	50 Epochs: Loss = 55.25%, Accuracy = 72.74%  => improvement in time and accuracy but loss increased
   
 * It seems more than 50 epochs the model begins to overfit so I stayed with 50 epochs as the optimal number of epochs.
 
 3. I adjusted the bucketing process.
 
-	- I increased the amount in the Other bucket for the APPLICATION_TYPE to include values less than 700.  The loss went up to 55.30% and the accuracy dropped a bit to 72.65%.
+	- I increased the amount in the Other bucket for the APPLICATION_TYPE to include values less than 700.  The loss went up to 55.30% and the accuracy dropped a bit to 72.65%. Image
 	
 After adjusting the APPLICATION_TYPE, I noticed the number of parameters dropped from 10,099 from 10,231 as the number of columns in the dataframe dropped by 1.  I interpreted this to mean that a certain number of columns must remain for the accuracy not to drop and for the loss not to increase. 
 
@@ -109,7 +119,7 @@ After adjusting the APPLICATION_TYPE, I noticed the number of parameters dropped
 
 Since reducing the epochs had a positive effect on the performance and little change to the loss and accuracy I decided to reduce neurons.
 	- I reduced the number of neurons to 80 in the first layer and 25 in the second layer.
-	- The loss and accuracy were very close to my initial numbers but the speed of compiling increased significantly so I felt like this was the number of neurons to use for my final model. Loss: 55.17%  Accuracy: 72.46%
+	- The loss and accuracy were very close to my initial numbers but the speed of compiling increased significantly so I felt like this was the number of neurons to use for my final model.
 		
 
 
@@ -126,7 +136,11 @@ After all the adjustments to the number of neurons, the epochs and the buckets t
 
 Results:
 
+Summary: Image
+
 Final model loss metric: 55.24%	Final model predictive accuracy: 72.54% Image
+
+Graph of Loss and Accuracy over the 50 Epochs Image
 
 If I were to try another model, I would try SVM, Support Vector Machine (Classifier) as it is faster to implement, much less code is required to train and test the model. SVMs can also build adequate models with linear or nonlinear data. Due to SVMs’ ability to create multidimensional borders, SVMs lose their interpretability and behave more like the black box machine learning models, such as basic neural networks and deep learning models.  Additionally, SVMs are less prone to overfitting because they are trying to maximize the distance, rather than encompass all data within a boundary.  Since I found evidnece of potential overfitting in the deep neural network model I built, the SVM model would be my next choice.
 
