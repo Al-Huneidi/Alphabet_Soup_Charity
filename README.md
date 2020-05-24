@@ -70,7 +70,7 @@ Random Forest Accuracy: 71%
 
 I moved to the Deep Neural Network model as this was not a high enough accuracy.
 
-![alt text](
+![alt text](https://github.com/Al-Huneidi/Alphabet_Soup_Charity/blob/master/Screenshots/132_33_Deep_NN/Random_Forest_accuracy.png)
 
 
 #### Deep Neural Network
