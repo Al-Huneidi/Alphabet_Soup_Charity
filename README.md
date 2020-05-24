@@ -9,8 +9,10 @@ Determine which organizations should receive donations by predicting the success
 Create a binary classifier that is capable of predicting whether or not an applicant will be successful if funded by Alphabet Soup using the features collected in the provided dataset.  List of features:
 
 ## Challenge Analysis Report
+
 ### Inspected the Data
 List of features:
+
 	•	EIN and NAME—Identification columns
 	•	APPLICATION_TYPE—Alphabet Soup application type
 	•	AFFILIATION—Affiliated sector of industry
@@ -24,6 +26,7 @@ List of features:
 	•	IS_SUCCESSFUL—Was the money used effectively
 
 The target for the model: IS_SUCCESSFUL
+
 The variables that are the features for the model:  APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, ASK_AMT
 
 ### Preprocessed the Data
@@ -38,6 +41,7 @@ Encoded categorical variables using one-hot encoding.
 Standardized numerical variables using Scikit-Learn’s StandardScaler class.
 
 ### Models Used: Random Forest and Deep Neural Network
+
 Random Forest
 I wanted to see the results of each of these models especially since the Random Forest is robust against overfitting and outliers and nonlinear data while being efficient on a large dataset, with less code and faster results.	
 Random Forest Accuracy: 71% Image
