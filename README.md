@@ -155,7 +155,7 @@ Summary:
 
 Plot of Loss and Accuracy over the 50 Epochs 
 
-Image
+![alt text](https://github.com/Al-Huneidi/Alphabet_Soup_Charity/blob/master/Screenshots/80_25_Deep_NN/plt_Loss_Accuracy.png)
 
 
 If I were to try another model, I would try SVM, Support Vector Machine (Classifier) as it is faster to implement, much less code is required to train and test the model. SVMs can also build adequate models with linear or nonlinear data. Due to SVMs’ ability to create multidimensional borders, SVMs lose their interpretability and behave more like the black box machine learning models, such as basic neural networks and deep learning models.  Additionally, SVMs are less prone to overfitting because they are trying to maximize the distance, rather than encompass all data within a boundary.  Since I found evidence of potential overfitting in the deep neural network model I built, the SVM model would be my next choice.
