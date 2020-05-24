@@ -128,7 +128,7 @@ Results:
 
 Final model loss metric: 55.24%	Final model predictive accuracy: 72.54% Image
 
-If I were to try another model, I would try SVM, Support Vector Machine (Classifier) as it is faster to implement, much less code is required to train and test the model. 
+If I were to try another model, I would try SVM, Support Vector Machine (Classifier) as it is faster to implement, much less code is required to train and test the model. SVMs can also build adequate models with linear or nonlinear data. Due to SVMs’ ability to create multidimensional borders, SVMs lose their interpretability and behave more like the black box machine learning models, such as basic neural networks and deep learning models.
 
 
 Resource:
