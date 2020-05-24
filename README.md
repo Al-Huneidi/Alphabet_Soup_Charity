@@ -49,7 +49,7 @@ Created density plots for:
 	
 	- APPLICATION_TYPE 
 
-![alt text](
+![alt text](https://github.com/Al-Huneidi/Alphabet_Soup_Charity/blob/master/Screenshots/Preprocessing/plt_App_density.png)
 	
 	
 	
@@ -70,7 +70,7 @@ Random Forest Accuracy: 71%
 
 I moved to the Deep Neural Network model as this was not a high enough accuracy.
 
-Image
+![alt text](
 
 
 #### Deep Neural Network
