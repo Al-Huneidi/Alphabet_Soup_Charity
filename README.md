@@ -62,7 +62,9 @@ I wanted to see the results of each of these models especially since the Random 
 
 #### Random Forest Results
 
-Random Forest Accuracy: 71%  I moved to the Deep Neural Network model as this was not a high enough accuracy.
+Random Forest Accuracy: 71%  
+
+I moved to the Deep Neural Network model as this was not a high enough accuracy.
 
 Image
 
@@ -136,13 +138,22 @@ After all the adjustments to the number of neurons, the epochs and the buckets t
 
 Results:
 
-Summary: Image
+Final model loss metric: 55.24%	Final model predictive accuracy: 72.54% 
 
-Final model loss metric: 55.24%	Final model predictive accuracy: 72.54% Image
+Image
 
-Graph of Loss and Accuracy over the 50 Epochs Image
 
-If I were to try another model, I would try SVM, Support Vector Machine (Classifier) as it is faster to implement, much less code is required to train and test the model. SVMs can also build adequate models with linear or nonlinear data. Due to SVMs’ ability to create multidimensional borders, SVMs lose their interpretability and behave more like the black box machine learning models, such as basic neural networks and deep learning models.  Additionally, SVMs are less prone to overfitting because they are trying to maximize the distance, rather than encompass all data within a boundary.  Since I found evidnece of potential overfitting in the deep neural network model I built, the SVM model would be my next choice.
+Summary: 
+
+Image
+
+
+Plot of Loss and Accuracy over the 50 Epochs 
+
+Image
+
+
+If I were to try another model, I would try SVM, Support Vector Machine (Classifier) as it is faster to implement, much less code is required to train and test the model. SVMs can also build adequate models with linear or nonlinear data. Due to SVMs’ ability to create multidimensional borders, SVMs lose their interpretability and behave more like the black box machine learning models, such as basic neural networks and deep learning models.  Additionally, SVMs are less prone to overfitting because they are trying to maximize the distance, rather than encompass all data within a boundary.  Since I found evidence of potential overfitting in the deep neural network model I built, the SVM model would be my next choice.
 
 
 Resource:
