@@ -125,9 +125,10 @@ After all the adjustments to the number of neurons, the epochs and the buckets t
 	- Sigmoid activation for output
 
 Results:
+
 Final model loss metric: 55.24%	Final model predictive accuracy: 72.54% Image
 
-If I were to try another model, I would try SVM, Support Vector Machine (Classifier) as it is faster to implement, much less code is required to train and test the model.
+If I were to try another model, I would try SVM, Support Vector Machine (Classifier) as it is faster to implement, much less code is required to train and test the model. 
 
 
 Resource:
