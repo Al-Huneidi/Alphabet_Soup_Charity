@@ -41,11 +41,15 @@ Got the value counts for:  CLASSIFICATION and APPLICATION_TYPE
 
 Created density plots for:
 
-	- CLASSIFICATION Image
+	- CLASSIFICATION 
+	
+![alt text](https://github.com/Al-Huneidi/Alphabet_Soup_Charity/blob/master/Screenshots/Preprocessing/plt_Class_density.png)
 	
 	
 	
-	- APPLICATION_TYPE Image
+	- APPLICATION_TYPE 
+
+![alt text](
 	
 	
 	
