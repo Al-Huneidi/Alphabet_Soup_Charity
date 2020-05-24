@@ -115,7 +115,7 @@ I reduced the epochs, not increased them.
 	- I bucketed the ASK_AMT column with no real improvement in the loss and accuracy results.
 	- I increased the amount in the Other bucket for the APPLICATION_TYPE to include values less than 700.  The loss went up to 55.30% and the accuracy dropped a bit to 72.65%. 
 	
-	Image
+![alt text](https://github.com/Al-Huneidi/Alphabet_Soup_Charity/blob/master/Screenshots/Buckets_Adjust_Deep_NN/Loss_Accuracy_adjusted.png)
 	
 After adjusting the APPLICATION_TYPE, I noticed the number of parameters dropped from 10,099 from 10,231 as the number of columns in the dataframe dropped by 1.  I interpreted this to mean that a certain number of columns must remain for the accuracy not to drop and for the loss not to increase. 
 
