@@ -104,7 +104,7 @@ Loss metric: 55.24%	Accuracy: 72.54%
 
 I reduced the epochs, not increased them.
 
-	⁃ 80 Epochs: Loss = 55.52%, Accuracy = 72.53%  => an improvement all - time, accuracy and loss
+	⁃ 80 Epochs: Loss = 55.52%, Accuracy = 72.53%  => an improvement in all - time, accuracy and loss
 	⁃ 65 Epochs: Loss = 55.25%, Accuracy = 72.67%  => improvement in time and accuracy but loss increased
 	⁃ 50 Epochs: Loss = 55.25%, Accuracy = 72.74%  => improvement in time and accuracy but loss increased
   
