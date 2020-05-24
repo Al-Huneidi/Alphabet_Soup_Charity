@@ -108,16 +108,19 @@ I reduced the epochs, not increased them.
 
 3. I adjusted the bucketing process.
 
-	- I increased the amount in the Other bucket for the APPLICATION_TYPE to include values less than 700.  The loss went up to 55.30% and the accuracy dropped a bit to 72.65%. Image
+	- I bucketed the ASK_AMT column with no real improvement in the loss and accuracy results.
+	- I increased the amount in the Other bucket for the APPLICATION_TYPE to include values less than 700.  The loss went up to 55.30% and the accuracy dropped a bit to 72.65%. 
+	
+	Image
 	
 After adjusting the APPLICATION_TYPE, I noticed the number of parameters dropped from 10,099 from 10,231 as the number of columns in the dataframe dropped by 1.  I interpreted this to mean that a certain number of columns must remain for the accuracy not to drop and for the loss not to increase. 
 
 
-3. I checked the dataset to see if I could improve the accuracy by adjusting the dataset.
+4. I checked the dataset to see if I could improve the accuracy by adjusting the dataset.
 
-	- I bucketed the ASK_AMT column with no improvement in the loss and accuracy results.
+	- I dropped the ASK_AMT feature with no real improvement in the loss and accuracy results.
   
-4. I adjusted the number of neurons in each hidden layer.  
+5. I adjusted the number of neurons in each hidden layer.  
 
 Since reducing the epochs had a positive effect on the performance and little change to the loss and accuracy I decided to reduce neurons.
 	- I reduced the number of neurons to 80 in the first layer and 25 in the second layer.
