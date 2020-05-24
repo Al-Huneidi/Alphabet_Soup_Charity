@@ -129,7 +129,7 @@ Since reducing the epochs had a positive effect on the performance and little ch
 
 
 
-#### Final Deep Learning Neural Network Model
+#### Final Results of Deep Learning Neural Network Model
 
 After all the adjustments to the number of neurons, the epochs and the buckets the best results came from a deep neural network model consisting of:
 	- CLASSIFICATION buckets set at less than 1883
