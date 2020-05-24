@@ -100,9 +100,9 @@ Image
 
 I reduced the epochs, not increased them.
 
-	⁃	80 Epochs: Loss = 55.52%, Accuracy = 72.53%  => an improvement all - time, accuracy and loss
-	⁃	65 Epochs: Loss = 55.25%, Accuracy = 72.67%  => improvement in time and accuracy but loss increased
-	⁃	50 Epochs: Loss = 55.25%, Accuracy = 72.74%  => improvement in time and accuracy but loss increased
+	⁃ 80 Epochs: Loss = 55.52%, Accuracy = 72.53%  => an improvement all - time, accuracy and loss
+	⁃ 65 Epochs: Loss = 55.25%, Accuracy = 72.67%  => improvement in time and accuracy but loss increased
+	⁃ 50 Epochs: Loss = 55.25%, Accuracy = 72.74%  => improvement in time and accuracy but loss increased
   
 * It seems more than 50 epochs the model begins to overfit so I stayed with 50 epochs as the optimal number of epochs.
 
