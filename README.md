@@ -35,18 +35,27 @@ APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, I
 ### Preprocessed the Data
 
 The unnecessary features removed from the input data: Name and EIN
+
 Got the value counts for:  CLASSIFICATION and APPLICATION_TYPE 
+
 Created density plots for:
+
 	- CLASSIFICATION Image
+	
 	- APPLICATION_TYPE Image
+	
 Bucketed features: CLASSIFICATION and APPLICATION_TYPE
+
 Encoded categorical variables using one-hot encoding. 
+
 Standardized numerical variables using Scikit-Learn’s StandardScaler class.
 
 ### Models Used: Random Forest and Deep Neural Network
 
-Random Forest
 I wanted to see the results of each of these models especially since the Random Forest is robust against overfitting and outliers and nonlinear data while being efficient on a large dataset, with less code and faster results.	
+
+#### Random Forest
+
 Random Forest Accuracy: 71% Image
 
 Deep Neural Network
