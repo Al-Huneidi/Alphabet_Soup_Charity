@@ -28,7 +28,9 @@ List of features:
 
 The target for the model: IS_SUCCESSFUL
 
-The variables that are the features for the model:  APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, ASK_AMT
+The variables that are the features for the model: 
+
+APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, ASK_AMT
 
 ### Preprocessed the Data
 
