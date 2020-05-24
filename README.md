@@ -143,9 +143,9 @@ After all the adjustments to the number of neurons, the epochs and the buckets t
 
 Results:
 
-Final model loss metric: 55.24%	Final model predictive accuracy: 72.54% 
+Final model loss metric: 55.17%	Final model predictive accuracy: 72.46% 
 
-Image
+![alt text](https://github.com/Al-Huneidi/Alphabet_Soup_Charity/blob/master/Screenshots/80_25_Deep_NN/loss_accuracy.png)
 
 
 Summary: 
