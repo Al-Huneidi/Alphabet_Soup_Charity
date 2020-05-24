@@ -58,13 +58,9 @@ I wanted to see the results of each of these models especially since the Random 
 
 Random Forest Accuracy: 71% Image
 
-Deep Neural Network
-I created a deep neural network to see if it would reach 75% or higher accuracy.
-I started with 2 hidden layers as that seemed to make sense with the number of rows in the dataset.  I kept the 2 hidden layers throughout.  In the process adjusted the neurons.
-I started with 132 neurons in the first layer and 33 neurons in the second layer.  I chose 132 neurons for the first layer because that number is three times the number of columns in the model dataframe.  I chose 33 neuron for the second layer I arbitrarily chose it by dividing 132 by 4, a fourth of the number of neuron in the first layer.  I set the number of Epochs to 100.  It took a long time to compile and the accuracy was close to the target of higher than 75% at 72.47% with a loss of 55.52%.  
-	
+#### Deep Neural Network
 
-### Model Adjustments to Achieve Predictive Accuracy Higher than 75%
+Created a deep neural network to see if it would reach 75% or higher accuracy.
 
 Initial model consisted of  the following:
 
@@ -80,30 +76,45 @@ Loss metric: 55.24%	Accuracy: 72.54%
 Image
 
 
-I had a hypothesis that model was overfitting due to too many epochs. To test my hypothesis of overfitting and to attempt achieving the higher than 75% accuracy and reduce the time to compile I began by adjusting the epochs.
-		
-1. I reduced the epochs, not increased.
+I started with 132 neurons in the first layer and 33 neurons in the second layer.  I chose 132 neurons for the first layer because that number is three times the number of columns in the model dataframe.  I chose 33 neuron for the second layer I arbitrarily chose it by dividing 132 by 4, a fourth of the number of neurons in the first layer.   
+	
+
+### Model Adjustments to Achieve Predictive Accuracy Higher than 75%
+
+1. I adjusted the number of hidden layers to three and adjusted the activation types.  I tried all combinations of sigmoid and reLu activation in the three hidden layers but little changed in the loss and accuracy of the model.  I returned to the orginal design of the hidden layers. 
+
+
+2. At 100 epochs, I had a hypothesis that model was overfitting due to too many epochs. To test my hypothesis of overfitting and to attempt achieving the higher than 75% accuracy and reduce the time to compile I began by adjusting the epochs.
+
+I reduced the epochs, not increased them.
+
 	⁃	80 Epochs: Loss = 55.52%, Accuracy = 72.53%  => an improvement all around
 	⁃	65 Epochs: Loss = 55.25%, Accuracy = 72.67%  => improvement in time and accuracy
 	⁃	50 Epochs: Loss = 55.25%, Accuracy = 72.74%  => improvement in time and accuracy
   
 * It seems more than 50 epochs the model begins to overfit so I stayed with 50 epochs as the optimal number of epochs.
 
-2. I adjusted the bucketing process.
-	- I increased the amount in the Other bucket for the APPLICATION_TYPE to include values less than 700.  The loss went up to 55.30% and the accuracy dropped a bit to 72.65%.  
-After adjusting the bucket, I noticed the number of parameters dropped from 10,099 from 10,231 as the number of columns in the dataframe dropped by 1.  I interpreted this to mean that a certain number of columns must remain for the accuracy not to drop and for the loss not to increase.  I abandoned adjusting the buckets further.
+3. I adjusted the bucketing process.
+
+	- I increased the amount in the Other bucket for the APPLICATION_TYPE to include values less than 700.  The loss went up to 55.30% and the accuracy dropped a bit to 72.65%.
+	
+After adjusting the APPLICATION_TYPE, I noticed the number of parameters dropped from 10,099 from 10,231 as the number of columns in the dataframe dropped by 1.  I interpreted this to mean that a certain number of columns must remain for the accuracy not to drop and for the loss not to increase. 
+
 
 3. I checked the dataset to see if I could improve the accuracy by adjusting the dataset.
-	- I bucketed the ASK_AMT columns to see what would happen to the input data.  When I tried several different amounts to create the “Other” the amounts in the buckets didn’t make any sense as the the values in the ASK_AMT vary too much from each other.  I decided the data was fine.
+
+	- I bucketed the ASK_AMT column with no improvement in the loss and accuracy results.
   
-4. I adjusted the number of neurons in each hidden layer.  Since reducing the epochs had a positive effect on the performance and little change to the loss and accuracy I decided to reduce neurons.
-	I reduced the number of neurons to 80 in the first layer and 25 in the second layer.
-	The loss and accuracy were very close to my initial numbers but the speed of compiling increased significantly so I felt like this was the number of neurons to use for my final model. Loss: 55.17%  Accuracy: 72.46%
+4. I adjusted the number of neurons in each hidden layer.  
+
+Since reducing the epochs had a positive effect on the performance and little change to the loss and accuracy I decided to reduce neurons.
+	- I reduced the number of neurons to 80 in the first layer and 25 in the second layer.
+	- The loss and accuracy were very close to my initial numbers but the speed of compiling increased significantly so I felt like this was the number of neurons to use for my final model. Loss: 55.17%  Accuracy: 72.46%
 		
-5. I did not choose a different activation feature for the hidden layers as I thought reLu was the best option for the type of features in this dataset.
 
 
-Final Deep Learning Neural Network Model
+
+#### Final Deep Learning Neural Network Model
 
 After all the adjustments to the number of neurons, the epochs and the buckets the best results came from a deep neural network model consisting of:
 	- CLASSIFICATION buckets set at less than 1883
@@ -111,7 +122,7 @@ After all the adjustments to the number of neurons, the epochs and the buckets t
 	- 2 hidden layers, the first with 80 neurons and the second with 25
 	- 50 epochs
 	- reLu activation of first and second hidden layers
-	-Sigmoid activation for output
+	- Sigmoid activation for output
 
 Results:
 Final model loss metric: 55.24%	Final model predictive accuracy: 72.54% Image
