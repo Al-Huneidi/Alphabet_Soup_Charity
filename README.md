@@ -5,8 +5,9 @@ Determine which organizations should receive donations by predicting the success
 
 # Challenge
 
-## Objectives
-Create a binary classifier that is capable of predicting whether or not an applicant will be successful if funded by Alphabet Soup using the features collected in the provided dataset.  List of features:
+## Objective
+
+Create a binary classifier that is capable of predicting whether or not an applicant will be successful if funded by Alphabet Soup using the features collected in the provided dataset.
 
 ## Challenge Analysis Report
 
