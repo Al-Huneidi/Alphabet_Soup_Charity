@@ -1,11 +1,9 @@
-# Alphabet_Soup_Charity
-Project consists of preparing input data, creating Deep Learning Models, designing, training, evaluating, and exporting neural networks using Python Pandas, TensorFlow, SciKit Learn.
+# Alphabet_Soup_Charity Project Overview
+
+Determine which organizations should receive donations by predicting the success of a venture paid by Alphabet Soup. Only those projects likely to be a success will receive any future funding from Alphabet Soup. Project consists of preparing input data, creating Deep Learning Models, designing, training, evaluating, and exporting neural networks using Python Pandas, TensorFlow, SciKit Learn.
 
 
 # Challenge
-
-## Project Overview
-Determine which organizations should receive donations by predicting the success of a venture paid by Alphabet Soup. Only those projects likely to be a success will receive any future funding from Alphabet Soup.
 
 ## Objectives
 Create a binary classifier that is capable of predicting whether or not an applicant will be successful if funded by Alphabet Soup using the features collected in the provided dataset.  List of features:
