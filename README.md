@@ -150,7 +150,7 @@ Final model loss metric: 55.17%	Final model predictive accuracy: 72.46%
 
 Summary: 
 
-Image
+![alt text](https://github.com/Al-Huneidi/Alphabet_Soup_Charity/blob/master/Screenshots/80_25_Deep_NN/Summary.png)
 
 
 Plot of Loss and Accuracy over the 50 Epochs 
